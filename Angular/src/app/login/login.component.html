@@ -1,0 +1,33 @@
+<div class="container" style="max-width: 600px; background-color: aquamarine; margin-top: 100px;; padding-bottom: 13px; padding-top: 10px;" >
+    <h2>User Login</h2>
+    <form #loginform = "ngForm" (ngSubmit)="loginUser()">
+        <small class="text-danger">
+            {{msg}}
+        </small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" autocomplete="off" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+        <!-- <small class="text-danger" [class.d-none]="email.valid && email.untouched">Invalid email pattern</small> -->
+        <div *ngIf= "email.errors && (email.invalid && email.touched)">
+            <small class="text-danger" *ngIf= "email.errors.required">This is a required Field</small>
+            <small class="text-danger" *ngIf= "email.errors.pattern">Email pattern doesn't match</small>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="user.password"  #password="ngModel" required [class.is-invalid]="password.invalid && password.touched">
+
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">This field is required</small>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info">Login</button>
+    
+    <!-- <small class="float-right" >New User?</small><br> -->
+    <h6 class="float-right" style="margin: auto;">New User->&nbsp;<button class= "btn btn-success btn-sm"  (click)="gotoregistration()">Register Here</button></h6>
+    
+    
+</form>
+  </div>
