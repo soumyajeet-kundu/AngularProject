@@ -1,5 +1,30 @@
-<div class="container" style="max-width: 600px; background-color: aquamarine; margin-top: 100px;; padding-bottom: 13px; padding-top: 10px;" >
-    <h2>User Login</h2>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 240, 248);">
+    <a class="navbar-brand" href="#"><h3 style="color: rgb(105, 3, 3); text-shadow: -2px 2px white;">Shadow BITE</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="gotoregistration()">Sign Up</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+<div class="container" style="background-image: url('https://www.careerdefenceschool.com/cms/users/assets/img/login-bg.jpg'); background-size: cover; max-width: 600px; background-color: aquamarine; margin-top: 70px;; padding-bottom: 13px; padding-top: 10px;">
+<!-- <div class="container" style="max-width: 600px; background-color: aquamarine; margin-top: 100px;; padding-bottom: 20px; padding-top: 10px;" > -->
+    <h2 style="color: white;">User Login</h2>
     <form #loginform = "ngForm" (ngSubmit)="loginUser()">
         <small class="text-danger">
             {{msg}}
@@ -9,8 +34,8 @@
         <input type="email" autocomplete="off" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
         <!-- <small class="text-danger" [class.d-none]="email.valid && email.untouched">Invalid email pattern</small> -->
         <div *ngIf= "email.errors && (email.invalid && email.touched)">
-            <small class="text-danger" *ngIf= "email.errors.required">This is a required Field</small>
-            <small class="text-danger" *ngIf= "email.errors.pattern">Email pattern doesn't match</small>
+            <small class="text-white" *ngIf= "email.errors.required">This is a required Field</small>
+            <small class="text-white" *ngIf= "email.errors.pattern">Email pattern doesn't match</small>
         </div>
 
       </div>
@@ -20,9 +45,7 @@
 
         <small class="text-danger" [class.d-none]="password.valid || password.untouched">This field is required</small>
       </div>
-      <div class="checkbox">
-        <label><input type="checkbox" name="remember"> Remember me</label>
-      </div>
+      
       <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info">Login</button>
     
     <!-- <small class="float-right" >New User?</small><br> -->
@@ -31,3 +54,4 @@
     
 </form>
   </div>
+  </body>
