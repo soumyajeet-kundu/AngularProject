@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 240, 248);">
         <a class="navbar-brand" href="#"><h3 style="color: rgb(80, 5, 5); text-shadow: -2px 2px white;">Shadow BITE</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,4 +26,42 @@
     <span [innerHTML]="result"></span>
 </form>
 </body>
+ -->
 
+
+
+ <div class="container row">
+      <div class="col-md-12">
+          <h1>Upload File</h1>
+      </div>
+  </div>
+  <div class="container row">
+      <div class="col-md-6">
+          <input type="file" (change)="onFileChanged($event)">
+      </div>
+      <div class="col-md-6">
+          <input type="button" (click)="onUpload()" value="upload">
+      </div>
+  </div>
+  <hr />
+  <div class="container row">
+      <div class="col-md-12">
+          <div *ngIf=message>{{message}}</div>
+      </div>
+  </div>
+  <div class="container row">
+      <div class="col-md-6">
+          <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+              name="name" />
+      </div>
+      <div class="col-md-6">
+          <input type="button" (click)="getImage()" value="Get Image">
+      </div>
+  </div>
+  <div class="container row">
+      <div class="col-md-12">
+          <div *ngIf=retrievedImage>
+              <img [src]="retrievedImage">
+          </div>
+      </div>
+  </div>
