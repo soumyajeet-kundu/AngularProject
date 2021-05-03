@@ -2,6 +2,7 @@ package com.app.registration.controller;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
@@ -45,7 +46,9 @@ public class ImageUploadController {
         return img;
 
     }
-
+    
+   
+  
     // compress the image bytes before storing it in the database
 
     public static byte[] compressBytes(byte[] data) {
@@ -94,4 +97,8 @@ public class ImageUploadController {
         }
         return outputStream.toByteArray();
     }
+    @GetMapping("/p")
+    public List<FileModel> getEmployee() { List<FileModel>
+	  emplist=imageRepository.findAll(); 
+    return emplist; }
 }

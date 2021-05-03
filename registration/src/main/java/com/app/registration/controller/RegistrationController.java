@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.app.registration.model.FileModel;
 import com.app.registration.model.User;
+import com.app.registration.repository.ImageRepository;
 import com.app.registration.service.RegistrationService;
 
 @SpringBootApplication
@@ -27,6 +31,9 @@ public class RegistrationController {
 	
 	@Autowired
 	private RegistrationService service;
+	
+	@Autowired
+    ImageRepository imageRepository;
 	
 	@PostMapping("/registeruser")
 	@CrossOrigin(origins = "http://localhost:4200")
@@ -83,5 +90,11 @@ public class RegistrationController {
 		model.addAttribute("msg", "Successfully added files  " + fileNames.toString());
 		return "uploadstatusview";
 	}
+	@GetMapping("/show")
+	@CrossOrigin(origins = "http://localhost:4200")
+    public List<FileModel> getEmployee() { List<FileModel>
+	  emplist=imageRepository.findAll(); 
+    return emplist; }
+	
 
 }
