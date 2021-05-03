@@ -29,7 +29,7 @@ export class RegistrationComponent implements OnInit {
       },
       error=> {
         console.log("exception occured");
-        this.msg = error.error;
+        this.msg ="User with "+ this.user.emailId +" already exists";
       }
     )
   }
