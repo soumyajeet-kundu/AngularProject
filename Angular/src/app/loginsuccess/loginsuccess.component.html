@@ -1,4 +1,4 @@
-<!-- <body>
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 240, 248);">
         <a class="navbar-brand" href="#"><h3 style="color: rgb(80, 5, 5); text-shadow: -2px 2px white;">Shadow BITE</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,10 @@
               <a class="nav-link" [routerLink]="['/login']">Login <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" (click)="gotoregistration()">Sign Up</a>
+              <a class="nav-link" [routerLink]="['/registration']">Sign Up</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" [routerLink]="['/show']">Show_Documents</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -20,51 +23,64 @@
           </form>
         </div>
       </nav>
-<form> 
+<!-- <form> 
     <input type="file" class="form-control" (change)="save($event)" multiple="multiple">
     <br>
     <span [innerHTML]="result"></span>
-</form>
-</body>
- -->
+</form> -->
 
 
 
- <div class="container row">
-      <div class="col-md-12">
-          <h1>Upload File</h1>
+
+
+<div class="container-fluid" style="background-image: url('https://www.careerdefenceschool.com/cms/users/assets/img/login-bg.jpg'); background-size: cover; max-width: 600px; background-color: aquamarine; margin-top: 10px; padding-bottom: 6px; margin-bottom: 5px;">
+      <div class="form-group">
+          <h2 style="color: white;">Upload Details</h2>
       </div>
+      <form #uploaddetails = "ngForm">
+      <!-- <small class="text-danger">
+        *ngIf=message>{{message}}
+      </small> -->
+
+  <!-- <div class="container row">
   </div>
-  <div class="container row">
-      <div class="col-md-6">
-          <input type="file" (change)="onFileChanged($event)">
-      </div>
-      <div class="col-md-6">
-          <input type="button" (click)="onUpload()" value="upload">
-      </div>
-      <div class="col-md-6">
-        <input type="button" [routerLink]="['/show']" value="Show">
-      </div>
-  </div>
-  <hr />
   <div class="container row">
       <div class="col-md-12">
           <div *ngIf=message>{{message}}</div>
       </div>
+  </div> -->
+
+  <div class="form-group">
+    <label for="source">Source:</label>
+    <input type="text" class="form-control" placeholder="enter source" name="source" required>
   </div>
-  <!-- <div class="container row">
-      <div class="col-md-6">
-          <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
-              name="name" />
-      </div>
-      <div class="col-md-6">
-          <input type="button" (click)="getImage()" value="Get Image">
-      </div> -->
+  <div class="form-group">
+    <label for="destination">Destination:</label>
+    <input type="text" class="form-control" placeholder="enter destination" name="destination" required>
+  </div>
+  <div class="form-group">
+    <label for="stime">Source Time:</label>
+    <input type="time" class="form-control" placeholder="enter source time" name="date" required>
+  </div>
+  <div class="form-group">
+    <label for="dtime">Destination Time:</label>
+    <input type="time" class="form-control" placeholder="enter time" name="time" required>
+  </div>
+  <!-- <div class="col-md-12"> -->
+    <!-- Source: <input type="text" placeholder="enter source"><br>
+    Destination: <input type="text" placeholder="enter destination"><br>
+    Date: <input type="date" placeholder="enter date"><br>
+    Destination: <input type="time" placeholder="enter time"> -->
+    <div class="form-group">
+      <input type="file" (change)="onFileChanged($event)">
   <!-- </div> -->
-  <div class="container row">
-      <div class="col-md-12">
-          <div *ngIf=retrievedImage>
-              <img [src]="retrievedImage">
-          </div>
-      </div>
   </div>
+
+<hr/>
+<div class="form-group">
+  <button [disabled]="uploaddetails.form.invalid" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/uploaded']" value="upload">Upload</button>
+  <h6 class="float-right" style="margin: auto;"><button class="btn btn-success" [routerLink]="['/show']">Show</button></h6>
+  <!-- <input type="button" [routerLink]="['/show']" value="Show"> -->
+</div>
+</form> 
+</div>

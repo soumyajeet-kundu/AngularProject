@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { ShowUploadDocComponent } from './show-upload-doc/show-upload-doc.component';
+import { UploadsuccessComponent } from './uploadsuccess/uploadsuccess.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShowUploadDocComponent } from './show-upload-doc/show-upload-doc.compon
     LoginComponent,
     RegistrationComponent,
     LoginsuccessComponent,
-    ShowUploadDocComponent
+    ShowUploadDocComponent,
+    UploadsuccessComponent
   ],
   imports: [
     BrowserModule,
