@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 240, 248);">
+<!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(15, 240, 248);">
   <a class="navbar-brand" href="#"><h3 style="color: rgb(80, 5, 5); text-shadow: -2px 2px white;">Shadow BITE</h3></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -21,9 +21,18 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-</nav>
-<h3>successully uploaded</h3>
+</nav> -->
 
-<div class="col-md-6">
-    <input type="button" [routerLink]="['/show']" value="Show">
+<div class="topnav">
+  <a class="active" href="#home">BITE Studio</a>
+  <div class="topnav-right">
+    <a href = "/show">Show Documents</a>
+    <a href = "/loginsuccess">Upload File</a>
+  </div>
+</div> 
+
+<div class="container" style="text-align: center; margin-top: 80px;">
+<h3 style="color: rgb(241, 11, 11);">Successully Uploaded</h3><br>
+  <button class="button" [routerLink]="['/show']"><span>Show Files</span></button>
+    <!-- <input type="button" [routerLink]="['/show']" value="Show"> -->
   </div>

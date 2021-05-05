@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Router, RouterEvent } from '@angular/router';
 import { RegistrationService } from '../registration.service';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-loginsuccess',
