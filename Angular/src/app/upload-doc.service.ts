@@ -24,6 +24,6 @@ export class UploadDocService {
   getImageData()
   {
     console.log("test call");
-    return this.httpClient.get<Imagetable[]>('http://localhost:7001/show');
+    return this.httpClient.get<Imagetable[]>('http://localhost:7002/show');
   }
 }

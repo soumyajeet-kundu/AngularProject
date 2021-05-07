@@ -10,34 +10,6 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./loginsuccess.component.css']
 })
 
-// export class LoginsuccessComponent implements OnInit {
-
-//   result: String = '';
-//   constructor(private _service : RegistrationService, private _router : Router) { }
-
-//   ngOnInit(): void {
-//   }
-
-//   gotoregistration(){
-//     this._router.navigate(['/registration'])
-//   }
-
-//   save(event:any): void{
-//     var selectFile = event.target.files;
-//     for(var i=0; i< selectFile.length; i++){
-//     this.result += '--------<br>'
-//     this.result += 'File Name: ' +selectFile[i].name;
-//     // this.result += '<br>File Name: ' +selectFile[i].User;
-//     this.result += '<br> File Size(byte): ' +selectFile[i].size;
-//     this.result += '<br> File Type: ' +selectFile[i].type;
-//     this.result += '<br>--------'
-//     }
-//   }
-
-// }
-
-
-
 
 
 export class LoginsuccessComponent{
@@ -60,7 +32,7 @@ export class LoginsuccessComponent{
       const uploadImageData = new FormData();
       uploadImageData.append('imageFile', this.selectedFile, this.selectedFile.name);
       //Make a call to the Spring Boot Application to save the image
-      this.httpClient.post('http://localhost:7001/image/upload', uploadImageData, { observe: 'response' })
+      this.httpClient.post('http://localhost:7002/upload', uploadImageData, { observe: 'response' })
         .subscribe((response) => {
           if (response.status === 200) {
             this.message = 'Image uploaded successfully';
@@ -70,21 +42,6 @@ export class LoginsuccessComponent{
         }
         );
     }
-
-      //Gets called when the user clicks on retieve image button to get the image from back end
-
-    //   getImage() {
-
-    //   //Make a call to Sprinf Boot to get the Image Bytes.
-    //   this.httpClient.get('http://localhost:7001/image/get/' + this.imageName)
-    //     .subscribe(
-    //       res => {
-    //         this.retrieveResonse = res;
-    //         this.base64Data = this.retrieveResonse.picByte;
-    //         this.retrievedImage = 'data:image/jpeg;base64,' + this.base64Data;
-    //       }
-    //     );
-
-    // }  
+   
   }
 

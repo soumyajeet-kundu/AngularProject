@@ -11,6 +11,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { ShowUploadDocComponent } from './show-upload-doc/show-upload-doc.component';
 import { UploadsuccessComponent } from './uploadsuccess/uploadsuccess.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UploadsuccessComponent } from './uploadsuccess/uploadsuccess.component'
     RegistrationComponent,
     LoginsuccessComponent,
     ShowUploadDocComponent,
-    UploadsuccessComponent
+    UploadsuccessComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
