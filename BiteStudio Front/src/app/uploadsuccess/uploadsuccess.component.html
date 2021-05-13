@@ -1,0 +1,75 @@
+<div class="topnav">
+  <a class="active" href="#home">BITE Studio</a>
+  <div class="topnav-right">
+    <a href = "/show">Show LogFile</a>
+    <a href = "/login">Log Out</a>
+  </div>
+</div> 
+
+<div class="container" style="text-align: center; margin-top: 50px;">
+<h3 style="color: rgb(241, 11, 11);">Upload The Log Files</h3><br>
+  <!-- <button class="button" [routerLink]="['/show']"><span>Show Files</span></button>  -->
+  </div>
+
+
+
+
+
+
+
+  <!-- <div class="csv-file-chooser-section">   
+    
+    <input type="file" (change)="onFileChanged($event)" #fileImportInput name="File Upload" id="csvFileUpload"(change)="fileChangeListener($event)" accept=".csv, .xls"  [(ngModel)]="file"/>
+
+    <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
+
+  </div>
+  
+  <div class="csv-result-table">
+  
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>User Name</th>
+          <th>Destination Address</th>
+          <th>Destination Time</th>
+          <th>Arrival Address</th>
+          <th>Arrival Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let csvData of csvRecords;let i = index;">
+  
+          <td>{{i+1}}</td>
+          <td>
+            <span>{{csvData.userName}}</span>
+          </td>
+          <td>
+            <span>{{csvData.destAdd}}</span>
+          </td>
+          <td>
+            <span>{{csvData.destTime}}</span>
+          </td>
+          <td>
+            <span>{{csvData.arrAdd}}</span>
+          </td>
+          <td>
+            <span>{{csvData.arrtime}}</span>
+          </td>
+         
+  
+        </tr>
+      </tbody>
+    </table>
+  
+  </div> -->
+
+
+  <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/>
+
+<div>
+  <h3>File Content</h3>
+  <pre> {{fileContent}} </pre>
+  <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
+</div>
