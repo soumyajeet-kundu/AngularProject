@@ -17,9 +17,9 @@
 
 
 
-  <div class="csv-file-chooser-section">   
+  <!-- <div class="csv-file-chooser-section">   
     
-    <input type="file" (change)="onFileChanged($event)" #fileImportInput name="File Upload" id="csvFileUpload"(change)="fileChangeListener($event)" accept=".csv, .xls" [(ngModel)]="file"/>
+    <input type="file" (change)="onFileChanged($event)" #fileImportInput name="File Upload" id="csvFileUpload"(change)="fileChangeListener($event)" accept=".csv, .xls"  [(ngModel)]="file"/>
 
     <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
 
@@ -36,7 +36,6 @@
           <th>Destination Time</th>
           <th>Arrival Address</th>
           <th>Arrival Time</th>
-          <!-- <th>Occupation</th> -->
         </tr>
       </thead>
       <tbody>
@@ -58,12 +57,19 @@
           <td>
             <span>{{csvData.arrtime}}</span>
           </td>
-          <!-- <td>
-            <span>{{csvData.occupation}}</span>
-          </td> -->
+         
   
         </tr>
       </tbody>
     </table>
   
-  </div>
+  </div> -->
+
+
+  <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/>
+
+<div>
+  <h3>File Content</h3>
+  <pre> {{fileContent}} </pre>
+  <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
+</div>

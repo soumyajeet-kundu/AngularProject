@@ -19,18 +19,33 @@ export class UploadsuccessComponent {
   retrieveResonse: any;
   message: string;
   imageName: any;
-  //Gets called when the user selects an image
   public onFileChanged(event) {
     this.selectedFile = event.target.files[0];
   }
-  //Gets called when the user clicks on submit to upload the image
+
+
+
+    fileContent: string = '';
+
+  public onChange(fileList: FileList): void {
+    let file = fileList[0];
+    let fileReader: FileReader = new FileReader();
+    let self = this;
+    fileReader.onloadend = function(x) {
+      (self.fileContent) = <string>fileReader.result;
+    }
+    fileReader.readAsText(file);
+  }
+  
+
+
+
+
 
   onUpload() {
     console.log(this.selectedFile);
-    //FormData API provides methods and properties to allow us easily prepare form data to be sent with POST HTTP requests.
     const uploadImageData = new FormData();
     uploadImageData.append('imageFile', this.selectedFile, this.selectedFile.name);
-    //Make a call to the Spring Boot Application to save the image
     this.httpClient.post('http://localhost:7002/upload', uploadImageData, { observe: 'response' })
       .subscribe((response) => {
         if (response.status === 200) {
@@ -50,8 +65,8 @@ export class UploadsuccessComponent {
   csvRecords: any[] =[];
   header = true;
  
-  // constructor(private ngxCsvParser: NgxCsvParser){
-  // }
+
+  
 
   @ViewChild('fileImportInput', {static: false}) fileImportInput: any;
   
@@ -67,5 +82,4 @@ export class UploadsuccessComponent {
       console.log('error', error);
     });
   }
-
 }
