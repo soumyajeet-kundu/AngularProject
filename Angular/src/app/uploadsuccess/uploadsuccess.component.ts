@@ -62,24 +62,24 @@ export class UploadsuccessComponent {
 
 
 
-  csvRecords: any[] =[];
-  header = true;
+  // csvRecords: any[] =[];
+  // header = true;
  
 
   
 
-  @ViewChild('fileImportInput', {static: false}) fileImportInput: any;
+  // @ViewChild('fileImportInput', {static: false}) fileImportInput: any;
   
-  fileChangeListener($event: any): void{
-    const files = $event.srcElement.files;
+  // fileChangeListener($event: any): void{
+  //   const files = $event.srcElement.files;
 
-    this.ngxCsvParser.parse(files[0], {header:this.header, delimiter: ','}).pipe().subscribe((result:Array<any>)=>{
-      console.log('result of file', result);
-      this.csvRecords= result;
-    },
+  //   this.ngxCsvParser.parse(files[0], {header:this.header, delimiter: ','}).pipe().subscribe((result:Array<any>)=>{
+  //     console.log('result of file', result);
+  //     this.csvRecords= result;
+  //   },
 
-    (error: NgxCSVParserError)=>{
-      console.log('error', error);
-    });
-  }
+  //   (error: NgxCSVParserError)=>{
+  //     console.log('error', error);
+  //   });
+  // }
 }

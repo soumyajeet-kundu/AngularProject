@@ -7,7 +7,7 @@
 </div> 
 
 <div class="container" style="text-align: center; margin-top: 50px;">
-<h3 style="color: rgb(241, 11, 11);">Upload The Log Files</h3><br>
+<h2 style="color: rgb(241, 11, 11);">Upload The Log Files</h2><br>
   <!-- <button class="button" [routerLink]="['/show']"><span>Show Files</span></button>  -->
   </div>
 
@@ -65,11 +65,15 @@
   
   </div> -->
 
-
-  <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/>
-
-<div>
-  <h3>File Content</h3>
-  <pre> {{fileContent}} </pre>
+  <div class="container" style="text-align: center; padding-left: 100px;">
+  <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/><br><br>
+  </div>
+  <div class="container" style="text-align: center; padding-right: 0px;">
   <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
+</div><br><br>
+
+<div class="container" style="margin: auto; width: 800px;">
+  <h3><u>File Content</u>:</h3><br>
+  <pre>{{fileContent}}</pre>
+  
 </div>
