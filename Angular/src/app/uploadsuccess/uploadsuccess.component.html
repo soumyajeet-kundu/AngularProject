@@ -1,79 +1,36 @@
 <div class="topnav">
   <a class="active" href="#home">BITE Studio</a>
   <div class="topnav-right">
+    <a href = "/loginsuccess">What is BITE?</a>
     <a href = "/show">Show LogFile</a>
     <a href = "/login">Log Out</a>
   </div>
 </div> 
 
-<div class="container" style="text-align: center; margin-top: 50px;">
+<div class="container" style="text-align: center; margin-top: 40px;">
 <h2 style="color: rgb(241, 11, 11);">Upload The Log Files</h2><br>
-  <!-- <button class="button" [routerLink]="['/show']"><span>Show Files</span></button>  -->
   </div>
 
 
 
 
 
-
-
-  <!-- <div class="csv-file-chooser-section">   
+  <div class="container">
+    <div class="jumbotron" style="text-align: center; ">
+      
     
-    <input type="file" (change)="onFileChanged($event)" #fileImportInput name="File Upload" id="csvFileUpload"(change)="fileChangeListener($event)" accept=".csv, .xls"  [(ngModel)]="file"/>
-
-    <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
-
-  </div>
-  
-  <div class="csv-result-table">
-  
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>User Name</th>
-          <th>Destination Address</th>
-          <th>Destination Time</th>
-          <th>Arrival Address</th>
-          <th>Arrival Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let csvData of csvRecords;let i = index;">
-  
-          <td>{{i+1}}</td>
-          <td>
-            <span>{{csvData.userName}}</span>
-          </td>
-          <td>
-            <span>{{csvData.destAdd}}</span>
-          </td>
-          <td>
-            <span>{{csvData.destTime}}</span>
-          </td>
-          <td>
-            <span>{{csvData.arrAdd}}</span>
-          </td>
-          <td>
-            <span>{{csvData.arrtime}}</span>
-          </td>
-         
-  
-        </tr>
-      </tbody>
-    </table>
-  
-  </div> -->
-
-  <div class="container" style="text-align: center; padding-left: 100px;">
-  <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/><br><br>
-  </div>
-  <div class="container" style="text-align: center; padding-right: 0px;">
-  <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
-</div><br><br>
-
-<div class="container" style="margin: auto; width: 800px;">
-  <h3><u>File Content</u>:</h3><br>
-  <pre>{{fileContent}}</pre>
-  
-</div>
+    <label class="file">
+      <input type="file" (change)="onFileChanged($event)" (change)="onChange($event.target.files)" [(ngModel)]="file"/>
+      <span class="file-custom"></span>
+    </label>
+    
+    
+      <button [disabled]="file===''" class= "btn btn-info" (click)="onUpload()" [routerLink]="['/dashboard']" >Upload</button>
+    </div>
+    </div>
+    <div class="container" style="margin: auto; width: 800px;">
+    <h3><u>File Content</u>:</h3>
+    </div><br>
+    <div class="container" style="margin: auto; width: 800px; border: 2px solid green; border-radius: 10px;">
+      <pre>{{fileContent}} </pre>
+    </div>
