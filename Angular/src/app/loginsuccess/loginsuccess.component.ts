@@ -42,6 +42,12 @@ export class LoginsuccessComponent{
         }
         );
     }
+
+
+
+    toLru(){
+      document.getElementById("lru").scrollIntoView({behavior:"smooth"});    
+    }
    
   }
 

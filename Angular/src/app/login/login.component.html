@@ -15,8 +15,6 @@
   <div class="topnav">
     <a class="active" href="#home">BITE Studio</a>
     <div class="topnav-right">
-      <!-- <a href="#search">Login</a>
-      <a  (click)="gotoregistration()">Sign Up</a> -->
     </div>
   </div> 
 
@@ -55,13 +53,13 @@
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
                     <label class="custom-control-label" for="customCheck1">Remember password</label>
                   </div>
-                  <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Sign in</button>
+                  <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-lg btn-success btn-block btn-login text-uppercase font-weight-bold mb-2">Sign in</button>
                   <div class="text-center">
                     <a class="small" href="#">Forgot password?</a></div>
                     <br>
                     <p style="text-align: center;">OR</p>
                     
-                    <button (click)="gotoregistration()" type="submit"class="btn btn-lg btn-success btn-block btn-login text-uppercase font-weight-bold mb-2" >New User? Register Here</button>
+                    <button (click)="gotoregistration()" type="submit"class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" >New User? Register Here</button>
                 </form>
               </div>
             </div>

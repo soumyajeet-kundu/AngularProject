@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -15,7 +16,8 @@
     <a class="active" href="#home">BITE Studio</a>
     <div class="topnav-right">
       <a href = "/loginsuccess">What is BITE?</a>
-      <a href = "/login">Log Out</a>
+      <a href = "/uploaded">Upload LogFiles</a>
+      <a href = "/login"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
     </div>
   </div> 
 
@@ -29,19 +31,22 @@
 <div class="row">
 <div class="col-md-12">
 <div class="table-wrap">
-<table class="table table-bordered table-dark table-hover">
-<thead>
-<tr>
+<table class="table table-bordered table-striped table-hover">
+<thead class="thead-dark">
+<tr style="text-align: center;">
 <th>Id</th>
 <th>File Name</th>
 <th>File Type</th>
+<th>Show Files</th>
 </tr>
 </thead>
 <tbody>
-<tr *ngFor="let imp of image">
+<tr *ngFor="let imp of image" style="text-align: center;">
             <td>{{imp.id}}</td>
             <td>{{imp.name}}</td>
             <td>{{imp.type}}</td>
+            <td><button class="btn btn-success" [routerLink]="['/dashboard']">View</button></td>
+
                        </tr>
 </tbody>
 </table>

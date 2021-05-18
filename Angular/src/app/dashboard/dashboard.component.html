@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
 <div class="topnav">
@@ -5,14 +7,19 @@
     <div class="topnav-right">
       <a href = "/loginsuccess">What is BITE?</a>
       <a href = "/show">Show LogFiles</a>
-      <a href = "/login">Log Out</a>
+      <a href = "/login"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
     </div>
   </div> 
  
   <div class="container" style="text-align: center; margin-top: 50px;">
   <h3 style="color: rgb(241, 11, 11);">Successfully Uploaded</h3><br>
-    <button class="button" [routerLink]="['/show']"><span>Show Files</span></button> 
+    <button class="button" [routerLink]="['/show']"><i class="fa fa-folder">&nbsp;</i><span>Show Files</span></button> 
     </div>
 </body>
+
+
+<!-- <body style="background-image: url();">
+  
+</body> -->
 
   

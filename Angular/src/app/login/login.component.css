@@ -41,9 +41,9 @@
   }
   
   .bg-image {
-    background-image: url('https://i.pinimg.com/originals/72/9e/46/729e4610eced20464a8115c74d4a90be.jpg');
+    background-image: url('https://i.pinimg.com/originals/90/58/a5/9058a5ec013afe7563cb32b507a5d586.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 20% 25%;
   }
   
   .login-heading {
