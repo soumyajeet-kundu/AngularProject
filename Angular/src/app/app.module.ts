@@ -12,6 +12,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { ShowUploadDocComponent } from './show-upload-doc/show-upload-doc.component';
 import { UploadsuccessComponent } from './uploadsuccess/uploadsuccess.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ViewLogErrorsComponent } from './view-log-errors/view-log-errors.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginsuccessComponent,
     ShowUploadDocComponent,
     UploadsuccessComponent,
-    DashboardComponent
+    DashboardComponent,
+    ViewLogErrorsComponent
   ],
   imports: [
     BrowserModule,

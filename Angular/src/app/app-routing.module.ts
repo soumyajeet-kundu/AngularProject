@@ -6,6 +6,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ShowUploadDocComponent } from './show-upload-doc/show-upload-doc.component';
 import { UploadsuccessComponent } from './uploadsuccess/uploadsuccess.component';
+import { ViewLogErrorsComponent } from './view-log-errors/view-log-errors.component';
 
 const routes: Routes = [
   {path:"" , component:LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"show",component:ShowUploadDocComponent},
   {path:"uploaded",component:UploadsuccessComponent},
   {path:"dashboard",component:DashboardComponent},
+  {path:"viewerrors",component:ViewLogErrorsComponent},
 
 ];
 

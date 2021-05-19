@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+
+</style>
+<body>
+
+    <div class="topnav">
+        <a class="active" href="#home">BITE Studio</a>
+        <div class="topnav-right">
+          <a href = "/loginsuccess">What is BITE?</a>
+          <a href = "/uploaded">Upload LogFiles</a>
+          <a href = "/show">Sho LogFiles</a>
+          <a href = "/login"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+        </div>
+      </div> 
+
+<h1 style="margin-top: 10px; background-color: rgb(177, 14, 95);">BITE LOG PCU</h1>
+  <div class="elements">
+    <div class="row">
+      <a class="element group-interactive"><span>00</span></a>
+      <a class="element group-interactive"><span>01</span></a>
+      <a class="element group-interactive"><span>02</span></a>
+      <a class="element group-interactive"><span>03</span></a>
+      <a class="element group-interactive"><span>04</span></a>
+      <a class="element group-interactive"><span>05</span></a>
+      <a class="element group-interactive"><span>06</span></a>
+      <a class="element group-interactive"><span>07</span></a>
+      <a class="element group-interactive"><span>08</span></a>
+      <a class="element group-interactive"><span>09</span></a>
+      <a class="element group-interactive"><span>10</span></a>
+      <a class="element group-interactive"><span>11</span></a>
+      <a class="element group-interactive"><span>12</span></a>
+      <a class="element group-interactive"><span>13</span></a>
+      <a class="element group-interactive"><span>14</span></a>
+      <a class="element group-interactive"><span>15</span></a>
+    </div>
+    <div class="row">
+      <a class="element group-interactive"><span>01</span></a>
+      <a (click)="showMessageSoon()" class="element group-table"><span>31</span></a>
+      <a (click)="fun02()" class="element group-table"><span>38</span></a>
+      <a (click)="fun03()" class="element group-table"><span>65</span></a>
+      <a (click)="fun04()" class="element group-forms"><span>66</span></a>
+      <a (click)="fun05()" class="element group-sectioning"><span>65</span></a>
+      <a (click)="fun06()" class="element group-sectioning"><span>37</span></a>
+      <a (click)="showMessageSoon()" class="element group-text-content"><span>31</span></a>
+      <a (click)="fun08()" class="element group-base"><span>31</span></a>
+      <a (click)="fun09()" class="element group-metadata"><span>38</span></a>
+      <a (click)="fun10()" class="element group-metadata"><span>65</span></a>
+      <a (click)="fun11()" class="element group-web-components"><span>66</span></a>
+      <a (click)="fun12()" class="element group-table"><span>63</span></a>
+      <a (click)="fun13()" class="element group-table"><span>65</span></a>
+      <a (click)="fun14()" class="element group-forms"><span>37</span></a>
+      <a (click)="fun15()" class="element group-forms"><span>31</span></a> -->
+    </div>
+    <div class="row">
+    <a class="element group-interactive"><span>02</span></a>
+    <a (click)="fun09()" class="element group-metadata"><span>38</span></a>
+      <a (click)="fun17()" class="element group-sectioning"><span>39</span></a>
+      <a (click)="fun18()" class="element group-sectioning"><span>66</span></a>
+      <a (click)="fun19()" class="element group-base"><span>66</span></a>
+      <a (click)="fun20()" class="element group-metadata"><span>37</span></a>
+      <a (click)="fun21()" class="element group-web-components"><span>36</span></a>
+      <a (click)="fun22()" class="element group-table"><span>38</span></a>
+      <a (click)="fun23()" class="element group-table"><span>39</span></a>
+      <a (click)="fun24()" class="element group-forms"><span>66</span></a>
+      <a (click)="fun25()" class="element group-forms"><span>66</span></a>
+      <a (click)="fun26()" class="element group-sectioning"><span>37</span></a>
+      <a (click)="fun27()" class="element group-sectioning"><span>36</span></a>
+      <a (click)="fun28()" class="element group-base"><span>33</span></a>
+      <a (click)="fun29()" class="element group-base"><span>30</span></a>
+      <a (click)="fun30()" class="element group-base"><span>33</span></a>
+    </div>
+    <div class="row">
+    <a class="element group-interactive"><span>03</span></a>
+      <a (click)="fun31()" class="element group-base"><span>66</span></a>
+      <a (click)="fun32()" class="element group-base"><span>38</span></a>
+      <a (click)="fun33()" class="element group-base"><span>37</span></a>
+      <a (click)="fun34()" class="element group-base"><span>63</span></a>
+      <a (click)="fun35()" class="element group-base"><span>30</span></a>
+      <a (click)="fun36()" class="element group-base"><span>33</span></a>
+      <a (click)="fun37()" class="element group-base"><span>37</span></a>
+      <a (click)="fun38()" class="element group-metadata"><span>38</span></a>
+      <a (click)="fun39()" class="element group-metadata"><span>37</span></a>
+      <a (click)="fun40()" class="element group-metadata"><span>33</span></a>
+      <a (click)="fun29()" class="element group-metadata"><span>30</span></a>
+      <a (click)="fun42()" class="element group-metadata"><span>65</span></a>
+      <a (click)="fun43()" class="element group-metadata"><span>65</span></a>
+      <a (click)="fun44()" class="element group-metadata"><span>31</span></a>
+      <a (click)="fun45()" class="element group-metadata"><span>66</span></a>
+    </div>
+    <div class="row">
+    <a class="element group-interactive"><span>04</span></a>
+      <a (click)="fun46()" class="element group-metadata"><span>39</span></a>
+      <a (click)="fun47()" class="element group-web-components"><span>66</span></a>
+      <a (click)="fun48()" class="element group-web-components"><span>38</span></a>
+      <a (click)="fun49()" class="element group-web-components"><span>33</span></a>
+      <a (click)="fun50()" class="element group-table"><span>39</span></a>
+      <a (click)="fun51()" class="element group-table"><span>37</span></a>
+      <a (click)="fun52()" class="element group-table"><span>39</span></a>
+      <a (click)="fun53()" class="element group-table"><span>38</span></a>
+      <a (click)="fun54()" class="element group-table"><span>38</span></a>
+      <a (click)="fun55()" class="element group-table"><span>65</span></a>
+      <a (click)="fun56()" class="element group-forms"><span>66</span></a>
+      <a (click)="fun57()" class="element group-forms"><span>33</span></a>
+      <a (click)="fun58()" class="element group-forms"><span>65</span></a>
+      <a (click)="fun59()" class="element group-forms"><span>65</span></a>
+      <a (click)="fun60()" class="element group-forms"><span>43</span></a>
+    </div>
+    <div class="row">
+    <a class="element group-interactive"><span>05</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+    </div>
+    <div class="row">
+    	<a class="element group-interactive"><span>06</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+    </div>
+    <div class="row">
+    	<a class="element group-interactive"><span>07</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+    </div>
+    <div class="row">
+    	<a class="element group-interactive"><span>08</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+    </div>
+    <div class="row">
+    	<a class="element group-interactive"><span>09</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+    </div>
+    <div class="row">
+    	<a class="element group-interactive"><span>10</span></a>
+      <a (click)="fun00()" class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00</span></a>
+      <a (click)="fun00()"  class="element group-text-semantics"><span>00 </span></a>
+    </div>
+  </div>
+  
+      <h3 *ngIf="showMyMessage" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_LEFT_BUS</h3>
+      <p *ngIf="showMyMessage" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF"</p>
+
+
+<h3 *ngIf="msg0" style="color: white; background-color: #eb4b0c;">No error</h3>
+
+
+    <!-- <div class="description group-base" id="44"> -->
+      <h2 *ngIf="msg44" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg44" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-base" id="8"> -->
+      <h2 *ngIf="msg8" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg8" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-base" id="15"> -->
+      <h2 *ngIf="msg15" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg15" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+
+    <!-- <div class="description group-forms" id="2"> -->
+      <h2 *ngIf="msg2" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg2" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND [IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+
+    <!-- <div class="description group-forms" id="48"> -->
+      <h2 *ngIf="msg48" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg48" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="32"> -->
+      <h2 *ngIf="msg32" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg32" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="38"> -->
+      <h2 *ngIf="msg38" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg38" style="color: white;"> "[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="9"> -->
+      <h2 *ngIf="msg9" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg9" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="16"> -->
+      <h2 *ngIf="msg9" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg9" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="53"> -->
+      <h2 *ngIf="msg51" style="color: white;">IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"
+</h2>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="54"> -->
+      <h2 *ngIf="msg54" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg54" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="22"> -->
+      <h2 *ngIf="msg22" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg22" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"
+</p>
+    <!-- </div> -->
+    <div class="description group-forms" id="38">
+      <h2>MON_BUC_OUT_DISTORTION_FAULT_RIGHT_BUS</h2>
+      <p>"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Right CCB Open Status] = OFF"
+</p>
+    </div>
+    <!-- <div class="description group-metadata" id="3"> -->
+      <h2 *ngIf="msg3" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg3" style="color: white;">"
+[IP EST Successful]=ON"
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="55"> -->
+      <h2 *ngIf="msg55" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg55" style="color: white;">"
+[IP EST Successful]=ON"
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="58"> -->
+      <h2 *ngIf="msg58" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg58" style="color: white;">"
+[IP EST Successful]=ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="59"> -->
+      <h2 *ngIf="msg59" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg59" style="color: white;">"
+[IP EST Successful]=ON"
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="43"> -->
+      <h2 *ngIf="msg43" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg43" style="color: white;">"
+[IP EST Successful]=ON"
+      </p>
+    <!-- </div> -->
+    
+      <h2 *ngIf="msg5" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg5" style="color: white;">"
+[IP EST Successful]=ON"
+
+      </p>
+
+    <!-- <div class="description group-metadata" id="10"> -->
+      <h2 *ngIf="msg10" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg10" style="color: white;">The HTML <code>&lt;base&gt;</code> element specifies the base URL to use for all relative URLs contained within a document. There can be only one
+        <code>&lt;base&gt;</code> element in a document.</p>
+      <p *ngIf="msg10" style="color: white;"><a class="moz-link" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/base">https://developer.mozilla.org/en/docs/Web/HTML/Element/base</a>
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="13"> -->
+      <h2 *ngIf="msg13" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg13" style="color: white;">"
+[IP EST Successful]=ON"
+
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-metadata" id="42"> -->
+      <h2 *ngIf="msg42" style="color: white;">MON_BUC_OUT_DISTORTION_FAULT_NO_BUS_CONNECTED</h2>
+      <p *ngIf="msg42" style="color: white;">"
+[IP EST Successful]=ON"
+
+      </p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="4"> -->
+      <h2 *ngIf="msg4" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg4" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="45"> -->
+      <h2 *ngIf="msg45" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg45" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="60"> -->
+      <h2 *ngIf="msg60" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg60" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="11"> -->
+      <h2 *ngIf="msg11" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg11" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="24"> -->
+      <h2 *ngIf="msg24" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg24" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="25"> -->
+      <h2 *ngIf="msg26" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg26" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="18"> -->
+      <h2 *ngIf="msg18" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg18" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="56"> -->
+      <h2 *ngIf="msg56" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg56" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="19"> -->
+      <h2 *ngIf="msg19" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg19" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="31"> -->
+      <h2 *ngIf="msg31" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg31" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-sectioning" id="47"> -->
+      <h2 *ngIf="msg47" style="color: white;">MON_BUC_OUT_DISTORTION_CONDITION_BOTH_BUS_CONNECTED</h2>
+      <p *ngIf="msg47" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="6"> -->
+      <h2 *ngIf="msg6" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg6" style="color: white;">The HTML Strong Element (<code>&lt;strong&gt;</code>) gives text strong importance, and is typically displayed in bold.</p>
+      <p *ngIf="msg6" style="color: white;"><a class="moz-link"
+            href="https://developer.mozilla.org/en/docs/Web/HTML/Element/strong">https://developer.mozilla.org/en/docs/Web/HTML/Element/strong</a></p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="33"> -->
+      <h2 *ngIf="msg33" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg33" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="37"> -->
+      <h2 *ngIf="msg37" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg37" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="14"> -->
+      <h2 *ngIf="msg14" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg14" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="20"> -->
+      <h2 *ngIf="msg20" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg20" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+    <div class="description group-text-semantics" id="26">
+      <h2>MON_DC_CONTENT_FAULT</h2>
+      <p>[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    </div>
+    <!-- <div class="description group-text-semantics" id="39"> -->
+      <h2 *ngIf="msg39" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg39" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-text-semantics" id="51"> -->
+      <h2 *ngIf="msg51" style="color: white;">MON_DC_CONTENT_FAULT</h2>
+      <p *ngIf="msg51" style="color: white;">[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS 
+</p>
+    <!-- </div> -->
+
+    <!-- <div class="description group-media" id="12"> -->
+      <h2 *ngIf="msg12" style="color: white;">MON_DC_LINK_OV_FAULT</h2>
+      <p *ngIf="msg12" style="color: white;">[IP (L)BUG Excite]  = ON OR [IP (R)BUG Excite]  = ON
+
+      </p>
+    <!-- </div> -->
+
+    <!-- <div class="description group-embedded" id="17"> -->
+      <h2 *ngIf="msg17" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg17" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-embedded" id="50"> -->
+      <h2 *ngIf="msg50" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg50" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-embedded" id="23"> -->
+      <h2 *ngIf="msg23" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg23" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-embedded" id="46"> -->
+      <h2 *ngIf="msg46" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg46" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-embedded" id="52"> -->
+      <h2 *ngIf="msg52" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg52" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-table" id="21"> -->
+      <h2 *ngIf="msg21" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg21" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+      </p>
+  <!-- </div> -->
+      <!-- <div class="description group-table" id="27"> -->
+      <h2 *ngIf="msg27" style="color: white;">MON_BUC_DIFF_FAULT_LEFT_BUS</h2>
+      <p *ngIf="msg27" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = OFF AND 
+[IP Right CCB Open Status] = ON"
+      </p>
+  <!-- </div> -->
+    <!-- <div class="description group-table" id="29"> -->
+      <h2 *ngIf="msg29" style="color: white;">MON_BUC_DIFF_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg29" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = ON AND
+[IP Right CCB Open Status] = OFF"
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-table" id="35"> -->
+      <h2 *ngIf="msg35" style="color: white;">MON_BUC_DIFF_FAULT_RIGHT_BUS</h2>
+      <p *ngIf="msg35" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND 
+[IP Left CCB Open Status] = ON AND
+[IP Right CCB Open Status] = OFF"
+</p>
+    <!-- </div>  -->
+    <!-- <div class="description group-forms" id="30"> -->
+      <h2 *ngIf="msg30" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg30" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="49"> -->
+      <h2 *ngIf="msg49" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg49" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="57"> -->
+      <h2 *ngIf="msg57" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg57" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="36"> -->
+      <h2 *ngIf="msg36" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg36" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="40"> -->
+      <h2 *ngIf="msg40" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg40" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <!-- <div class="description group-forms" id="28"> -->
+      <h2 *ngIf="msg28" style="color: white;">MON_BUC_DIFF_FAULT_BOTH_BUS_CLOSED</h2>
+      <p *ngIf="msg28" style="color: white;">[IP EST Successful]=ON
+</p>
+    <!-- </div> -->
+    <div class="description group-forms" id="27">
+      <h2>MON_BUC_DIFF_FAULT_BOTH_BUS_OPENED</h2>
+      <p>[IP EST Successful]=ON
+
+      </p>
+    </div>
+    <!-- <div class="description group-metadata" id="34"> -->
+      <h2 *ngIf="msg34" style="color: white;">MON_BUC_OUTPUT_OC_ON_LCCB_FAULT</h2>
+      <p *ngIf="msg34" style="color: white;">"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND
+[IP Left CCB Open Status] = OFF AND 
+[IP Phase A|B|C current at the BUC output] < 153A"
+</p>
+    <!-- </div> -->
+    <div class="description group-sectioning" id="hgroup">
+      <h2>MON_BUC_OUTPUT_OC_ON_RCCB_FAULT</h2>
+      <p>"[IP BUC 3-Phase Avg LinetoNeutral Volt POR] >= 105 V RMS AND  
+[IP Right CCB Open Status] = OFF AND 
+[IP Phase A|B|C current at the BUC output] < 153A"
+</p>
+    </div>
+    <div class="description group-text-semantics" id="sub">
+      <h2>MON_LEFT_TBB_OC_FAULT</h2>
+      <p>"[IP Left TBB Open Status] = OFF AND
+[IP Left CCB Open Status] = ON  AND 
+[IP Left Transfer Bus Voltage Phase A] > 102 Vrms AND
+[IP Left Transfer Bus Voltage Phase B] > 102 Vrms AND
+[IP Left Transfer Bus Voltage Phase C] > 102 Vrms AND
+[IP Left TBB - Highest Current] < 95 Amps"
+
+      </p>
+  </div>
